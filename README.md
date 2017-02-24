@@ -1,2 +1,2 @@
 # h-data-converter
-Converts between HWhile / F data types and numbers or lists 
+Converts between While / Fwhile data types and numbers or lists 
