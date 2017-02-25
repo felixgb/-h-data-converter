@@ -7,12 +7,7 @@ import Text.Megaparsec.String
 import Text.Megaparsec.Error
 import qualified Text.Megaparsec.Lexer as L
 
-data HTree = Nil | Node HTree HTree
-    deriving (Eq, Ord)
-
-instance Show HTree where
-    show Nil = "nil"
-    show (Node b1 b2) = "<" ++ show b1 ++ "." ++ show b2 ++ ">"
+import FSyntax
 
 -- parser
 
