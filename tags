@@ -25,8 +25,8 @@ instance	./src/Conv.hs	11
 lexeme	./src/Conv.hs	24
 lexeme	./src/Conv.hs	25
 main	./Setup.hs	2
-main	./app/Main.hs	3
-main	./app/Main.hs	4
+main	./app/Main.hs	8
+main	./app/Main.hs	9
 main	./test/Spec.hs	4
 main	./test/Spec.hs	5
 nil	./src/Conv.hs	39
