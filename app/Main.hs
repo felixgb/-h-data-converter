@@ -5,8 +5,11 @@ import System.Environment
 import FParser
 import FPrint
 
+import Conv
+
 main :: IO ()
 main = do
-    args <- getArgs
-    case head args of
-        "-fd" -> putStrLn (datafyProg $ parseProgram $ head $ tail args)
+    (flag : expr) <- getArgs
+    case flag of
+        "-fd" -> putStrLn (datafyProg $ parseProgram $ head expr)
+        "-nl" -> putStrLn (conv $ head expr)
