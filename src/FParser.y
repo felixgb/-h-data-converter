@@ -33,7 +33,7 @@ Prog :: { FProgram }
 Prog : input var output Expr where f '(' var ')' '=' Expr       { FProgram $2 $4 $11 }
 
 Expr :: { FExpr }
-Expr : var                              { FVar $1 }
+Expr : var                              { FVar }
      | nil                              { FNil }
      | cons Expr Expr                   { FCons $2 $3 }
      | hd Expr                          { FHd $2 }

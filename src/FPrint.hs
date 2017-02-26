@@ -11,7 +11,7 @@ datafyProg (FProgram x e b) = stringConcat [datafyExpr e, datafyExpr b]
 
 datafyExpr :: FExpr -> String
 datafyExpr expr = case expr of
-    (FVar x)            -> stringConcat ["@var"]
+    FVar                -> stringConcat ["@var"]
     FNil                -> stringConcat ["@quote", "@nil"]
     (FCons e1 e2)       -> stringConcat ["@cons", ts e1, ts e2]
     (FHd e1)            -> stringConcat ["@hd", ts e1]

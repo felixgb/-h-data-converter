@@ -13,7 +13,7 @@ data FProgram = FProgram String FExpr FExpr
     deriving (Eq, Ord, Show)
 
 data FExpr
-    = FVar String
+    = FVar
     | FNil
     | FCons FExpr FExpr
     | FHd FExpr
@@ -25,8 +25,9 @@ data FExpr
 data Sem = Sem FExpr
     deriving (Eq, Ord, Show)
 
-type FThrowsError = Except FError
+type ThrowsError = Except ConvError
 
-data FError
-    = FParseError
+data ConvError
+    = NumError HTree
+    | TreeParseError String
     deriving (Eq, Ord, Show)

@@ -49,13 +49,6 @@ node = angles inner
 
 -- converter
 
-type ThrowsError = Except ConvError
-
-data ConvError
-    = NumError HTree
-    | TreeParseError String
-    deriving (Eq, Ord, Show)
-
 runTreeParser :: String -> ThrowsError HTree
 runTreeParser inp = case runParser tree "<stdin>" inp of
     (Left err) -> throwError $ TreeParseError (parseErrorPretty err)

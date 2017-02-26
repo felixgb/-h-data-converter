@@ -1,0 +1,1 @@
+input X output f(X) where f(X) = if hd X then cons nil f(cons tl hd X cons hd tl X nil) else hd tl X
